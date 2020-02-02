@@ -11,9 +11,10 @@ defmodule LinksApp.Application do
       # Start the Ecto repository
       LinksApp.Repo,
       # Start the endpoint when the application starts
-      LinksAppWeb.Endpoint
+      LinksAppWeb.Endpoint,
       # Starts a worker by calling: LinksApp.Worker.start_link(arg)
       # {LinksApp.Worker, arg},
+      LinksCounter.Redix
     ]
 
     # See https://hexdocs.pm/elixir/Supervisor.html
